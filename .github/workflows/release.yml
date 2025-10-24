@@ -73,7 +73,7 @@ jobs:
         env:
           CIBW_BUILD: "*cp3${{ matrix.python }}*"
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: wheels-${{ matrix.os }}-3.${{ matrix.python }}
           path: ./wheelhouse/*.whl
@@ -93,7 +93,7 @@ jobs:
         uses: ./.github/actions/setup-environment
 
       - name: Download All Artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v6
         with:
           path: dist
           merge-multiple: true
