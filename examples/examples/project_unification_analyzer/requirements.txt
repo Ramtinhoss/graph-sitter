@@ -1,0 +1,36 @@
+# Project Unification Analyzer - Optional Dependencies
+# ====================================================
+# These dependencies enable advanced features in the analyzers.
+# The tools will work with basic functionality even without these packages.
+
+# Core Scientific Computing
+# --------------------------
+numpy>=1.24.0              # Array operations and numerical computing
+scikit-learn>=1.3.0        # Machine learning utilities (cosine similarity, clustering)
+
+# Graph Analysis
+# --------------
+networkx>=3.0              # Graph algorithms and knowledge graphs
+
+# Full-Text Search (Enhanced Analyzer)
+# ------------------------------------
+whoosh>=2.7.4              # Fast full-text indexing and search
+
+# Semantic Similarity (ML-based)
+# ------------------------------
+sentence-transformers>=2.2.0   # Sentence embeddings for semantic code similarity
+torch>=2.0.0                   # PyTorch (required by sentence-transformers)
+transformers>=4.30.0           # Hugging Face transformers
+
+# Optional: Faster implementations
+# ---------------------------------
+# faiss-cpu>=1.7.0         # Fast similarity search (alternative to scikit-learn)
+# hnswlib>=0.7.0           # Hierarchical Navigable Small World graphs
+
+# Note about Repomix
+# ------------------
+# Repomix is a Node.js tool and must be installed separately:
+# npm install -g repomix
+#
+# It is optional - the analyzer works without it but will skip
+# Repomix-specific features.
